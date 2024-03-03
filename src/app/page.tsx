@@ -1,7 +1,7 @@
 import Hero from '@/containers/Hero';
 import About from '@/containers/About';
 import Skills from '@/containers/Skills';
-import Experience from '@/containers/Experience';
+/* import Experience from '@/containers/Experience' */
 import Projects from '@/containers/Projects';
 
 export default function Home() {

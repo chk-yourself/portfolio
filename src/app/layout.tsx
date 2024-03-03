@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Inconsolata, Karla, Montserrat } from 'next/font/google';
+import { Inter, Inconsolata } from 'next/font/google';
 import Navbar from '../components/Navbar';
 import './globals.css';
 
@@ -8,13 +8,6 @@ const inter = Inter({
   display: 'swap',
   variable: '--font-display',
   weight: ['500', '600', '700'],
-});
-
-const karla = Karla({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-display',
-  weight: ['400', '500', '600', '700', '800'],
 });
 
 const inconsolata = Inconsolata({
