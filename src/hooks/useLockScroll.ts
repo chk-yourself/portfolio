@@ -1,0 +1,55 @@
+import { useLayoutEffect, useCallback, useRef } from "react";
+
+interface OriginalStyleProps {
+  overflow: CSSStyleDeclaration['overflow'];
+  paddingRight: CSSStyleDeclaration['paddingRight'];
+}
+
+const useLockScroll = () => {
+  const ref = useRef<HTMLElement | null>(null);
+  const originalStyle = useRef<OriginalStyleProps | null>(null);
+
+  const lock = useCallback(() => {
+    console.log('lock')
+    if (ref.current) {
+      const { overflow, paddingRight } = window.getComputedStyle(ref.current);
+
+      // Save original styles
+      originalStyle.current = { overflow, paddingRight };
+      console.log({ overflow, paddingRight })
+
+      ref.current.style.overflow = 'hidden';
+
+      // Prevent width reflow after removing the scrollbar by adding scrollbar width to right-padding
+      const scrollbarWidth = ref.current.offsetWidth - ref.current.clientWidth;
+      ref.current.style.paddingRight = `${scrollbarWidth}px`;
+
+    }
+  }, []);
+
+  // Restore original styles
+  const unlock = useCallback(() => {
+    if (ref.current && originalStyle.current) {
+      ref.current.style.overflow = originalStyle.current.overflow
+      ref.current.style.paddingRight = originalStyle.current.paddingRight
+    }
+  }, []);
+
+  useLayoutEffect(() => {
+    console.log('use layout effect')
+    if (!ref.current) {
+      ref.current = document.body;
+    }
+
+    return () => {
+      if (ref.current) {
+        unlock();
+      }
+
+    };
+  }, []);
+
+  return { ref, lock, unlock };
+};
+
+export default useLockScroll;

@@ -11,7 +11,7 @@ const SKILLS: SkillProps[] = [
   {
     title: 'Languages',
     skills: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Shopify Liquid'],
-    cssClass: 'text-fuchsia-700 border-fuchsia-700',
+    cssClass: 'text-fuchsia-700 border-fuchsia-600',
   },
   {
     title: 'Frameworks/Libraries',
@@ -27,7 +27,7 @@ const SKILLS: SkillProps[] = [
       'Express',
       'jQuery',
     ],
-    cssClass: 'text-violet-700 border-violet-700',
+    cssClass: 'text-violet-700 border-violet-600',
   },
   {
     title: 'Tools/Platforms',
@@ -46,7 +46,7 @@ const SKILLS: SkillProps[] = [
       'Docker',
       'Strapi',
     ],
-    cssClass: 'text-blue-700 border-blue-700',
+    cssClass: 'text-blue-700 border-blue-600',
   },
 ];
 

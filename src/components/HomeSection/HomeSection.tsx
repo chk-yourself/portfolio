@@ -16,12 +16,12 @@ const HomeSection = ({
 }: HomeSectionProps) => {
   return (
     <section
-      className={`mx-auto min-h-screen
-    scroll-smooth pt-14 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl ${className}`}
+      className={`mx-auto flex min-h-screen snap-start flex-col
+    justify-center scroll-smooth pt-10 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl ${className}`}
       {...props}
     >
       {title && (
-        <h2 className="mb-8 text-4xl font-bold tracking-tightest md:text-5xl">
+        <h2 className="mb-4 text-4xl font-bold tracking-tightest md:text-5xl">
           {title}
         </h2>
       )}

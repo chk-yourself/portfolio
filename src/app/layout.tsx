@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Inconsolata } from 'next/font/google';
-import Navbar from '../components/Navbar';
+import { ModalProvider } from '@/components/Modal';
 import './globals.css';
 
 const inter = Inter({
@@ -31,8 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${inconsolata.variable}`}>
       <body className="bg-slate-50">
-        <Navbar />
-        {children}
+        <ModalProvider>{children}</ModalProvider>
       </body>
     </html>
   );

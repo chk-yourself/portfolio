@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { MouseEvent } from 'react';
 import { useMediaQuery } from '@/hooks';
 import NavLink from './NavLink';
+import Logo from './Logo';
+import { CloseIcon, MenuIcon } from '@/icons';
 
 const NAV_LINKS = [
   {
@@ -28,14 +30,18 @@ const NAV_LINKS = [
   },
 ];
 
-const Navbar = () => {
+interface NavbarProps {
+  disableScroll: (isDisabled: boolean) => void;
+}
+
+const Navbar = ({ disableScroll }: NavbarProps) => {
   const [activeSectionId, setActiveSectionId] = useState('hero');
   const [showMenu, setShowMenu] = useState(false);
-  const collapseMenu = useMediaQuery('(min-width: 768px)');
+  const expandMenu = useMediaQuery('(min-width: 768px)');
 
   useEffect(() => {
     const handleScrollEnd = () => {
-      const scrollPosition = window.scrollY;
+      const scrollPosition = document.body.scrollTop;
       const sections = document.querySelectorAll('section');
 
       sections.forEach((section) => {
@@ -43,17 +49,17 @@ const Navbar = () => {
         const sectionHeight = section.offsetHeight;
 
         if (
-          scrollPosition >= sectionTop - 56 &&
-          scrollPosition < sectionTop + sectionHeight - 56
+          scrollPosition >= sectionTop - 40 &&
+          scrollPosition < sectionTop + sectionHeight - 40
         ) {
           setActiveSectionId(section.id);
         }
       });
     };
 
-    window.addEventListener('scrollend', handleScrollEnd);
+    document.body.addEventListener('scrollend', handleScrollEnd);
     return () => {
-      window.removeEventListener('scrollend', handleScrollEnd);
+      document.body.removeEventListener('scrollend', handleScrollEnd);
     };
   }, []);
 
@@ -63,12 +69,19 @@ const Navbar = () => {
   }, [activeSectionId]);
 
   useEffect(() => {
-    if (collapseMenu) {
+    setShowMenu(false);
+    /*
+    if (expandMenu) {
       setShowMenu(true);
     } else {
       setShowMenu(false);
     }
-  }, [collapseMenu]);
+    */
+  }, [expandMenu]);
+
+  useEffect(() => {
+    disableScroll(showMenu);
+  }, [showMenu, disableScroll]);
 
   const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -76,43 +89,33 @@ const Navbar = () => {
     if (sectionId) {
       setActiveSectionId(sectionId);
     }
+    if (showMenu) {
+      setShowMenu(false);
+    }
   };
 
   const handleToggleMenu = () => {
     setShowMenu((prev) => !prev);
   };
 
-  console.log({ activeSectionId });
-
   return (
-    <nav className="fixed flex h-14 w-full items-center justify-between bg-slate-50">
+    <nav className="fixed flex h-10 w-full items-center justify-between bg-slate-50">
       <div>
-        <NavLink
-          label="ck"
-          url="/"
-          className="font-display text-2xl font-bold lowercase"
-        />
+        <Logo />
       </div>
       <div className="block md:hidden">
         <button
           onClick={handleToggleMenu}
-          className="flex items-center px-3 py-2 hover:border-white hover:text-white"
+          className="flex items-center px-3 py-2 hover:text-pink-300"
         >
-          <svg
-            className="h-3 w-3 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
+          {showMenu ? <CloseIcon /> : <MenuIcon />}
         </button>
       </div>
-      {showMenu && (
-        <div className="absolute left-0 top-full block w-full md:static md:flex md:w-auto md:items-center">
-          <ul className="flex flex-col text-sm md:flex-grow md:flex-row">
+      {(expandMenu || showMenu) && (
+        <div className="absolute left-0 top-10 flex h-[calc(100vh_-_40px)] w-full items-start justify-center overflow-y-auto bg-slate-50 pt-10 md:static md:top-0 md:flex md:h-auto md:w-auto md:items-center md:pt-0">
+          <ul className="flex flex-col md:flex-grow md:flex-row">
             {NAV_LINKS.map((link) => (
-              <li key={link.label}>
+              <li key={link.label} className="py-4 md:py-0">
                 <NavLink
                   key={link.label}
                   onClick={handleLinkClick}

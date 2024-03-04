@@ -1,14 +1,14 @@
 'use client';
-import { useState } from 'react';
-import type { ReactElement } from 'react';
-import type { MouseEvent } from 'react';
+import { useContext } from 'react';
+import type { ReactElement, MouseEvent } from 'react';
 import HomeSection from '@/components/HomeSection';
-import Modal from '@/components/Modal';
 import FlumeContent from './FlumeContent';
 import Shop88risingContent from './Shop88risingContent';
 import World1999Content from './World1999Content';
 import HondaLookbookContent from './HondaLookbookContent';
 import OhtNycContent from './OhtNycContent';
+import ProjectModalContent from './ProjectModalContent';
+import { ModalContext } from '@/components/Modal';
 
 export interface TagsProps {
   tech: string[];
@@ -85,42 +85,37 @@ const PROJECTS: ProjectProps[] = [
   },
 ];
 
-const Projects = () => {
-  const [activeProject, setActiveProject] = useState<ProjectProps | null>(null);
+interface ProjectsProps {
+  className?: string;
+}
+
+const Projects = ({ className = '' }: ProjectsProps) => {
+  const { openModal } = useContext(ModalContext);
 
   const handleOpenProject = (e: MouseEvent<HTMLButtonElement>) => {
-    setActiveProject(
-      PROJECTS[Number(e.currentTarget.getAttribute('data-index'))] ?? null,
+    const activeProject =
+      PROJECTS[Number(e.currentTarget.getAttribute('data-index'))] ?? null;
+    openModal(
+      <ProjectModalContent {...(activeProject ? activeProject : {})} />,
     );
   };
 
-  const handleCloseProject = () => {
-    setActiveProject(null);
-  };
-
   return (
-    <>
-      <HomeSection title="Projects" id="projects" className="">
-        <ul className="mx-auto flex flex-col gap-1 md:mr-0 md:max-w-md md:gap-2">
-          {PROJECTS.map((project, i) => (
-            <li key={project.title} className="text-3xl md:text-5xl">
-              <button
-                className="project-btn text-left leading-none"
-                onClick={handleOpenProject}
-                data-index={i}
-              >
-                {project.title}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </HomeSection>
-      <Modal
-        onClose={handleCloseProject}
-        {...(activeProject ? activeProject : {})}
-        isActive={!!activeProject}
-      />
-    </>
+    <HomeSection title="Projects" id="projects" className={`${className}`}>
+      <ul className="mx-auto flex flex-col gap-1 md:mr-0 md:max-w-md md:gap-2">
+        {PROJECTS.map((project, i) => (
+          <li key={project.title} className="text-3xl md:text-5xl">
+            <button
+              className="project-btn text-left leading-none"
+              onClick={handleOpenProject}
+              data-index={i}
+            >
+              {project.title}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </HomeSection>
   );
 };
 

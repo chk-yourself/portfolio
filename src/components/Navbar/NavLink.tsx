@@ -20,7 +20,7 @@ const NavLink = ({
     <Link
       href={url}
       {...(hash && { 'data-section-id': hash })}
-      className={`nav-link m-4 block text-base uppercase hover:text-slate-900 active:text-slate-300 lg:mt-0 lg:inline-block ${className}`}
+      className={`nav-link mx-3 inline-block text-4xl uppercase hover:text-slate-900 active:text-slate-300 md:mx-4 md:text-base ${className}`}
       {...props}
     >
       {label}
