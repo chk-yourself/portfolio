@@ -1,3 +1,4 @@
+'use client';
 import HomeSection from '@/components/HomeSection';
 
 interface SkillProps {
