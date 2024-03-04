@@ -9,9 +9,7 @@ import Navbar from '@/components/Navbar';
 import { useLockScroll } from '@/hooks';
 
 export default function Home() {
-  {
-    /*const [isScrollDisabled, setIsScrollDisabled] = useState(false);*/
-  }
+  /*const [isScrollDisabled, setIsScrollDisabled] = useState(false);*/
   const { lock, unlock } = useLockScroll();
 
   const handleDisableScroll = useCallback((isDisabled: boolean = false) => {
