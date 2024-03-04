@@ -4,14 +4,14 @@ import HomeSection from '@/components/HomeSection';
 interface SkillProps {
   title: string;
   skills: string[];
-  color: string;
+  cssClass?: string;
 }
 
 const SKILLS: SkillProps[] = [
   {
     title: 'Languages',
     skills: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Shopify Liquid'],
-    color: 'fuchsia',
+    cssClass: 'text-fuchsia-700 border-fuchsia-700',
   },
   {
     title: 'Frameworks/Libraries',
@@ -27,7 +27,7 @@ const SKILLS: SkillProps[] = [
       'Express',
       'jQuery',
     ],
-    color: 'violet',
+    cssClass: 'text-violet-700 border-violet-700',
   },
   {
     title: 'Tools/Platforms',
@@ -46,7 +46,7 @@ const SKILLS: SkillProps[] = [
       'Docker',
       'Strapi',
     ],
-    color: 'blue',
+    cssClass: 'text-blue-700 border-blue-700',
   },
 ];
 
@@ -62,13 +62,11 @@ const Skills = () => {
             <h3 className="text-xl font-bold tracking-tightest">
               {skillset.title}
             </h3>
-            <ul
-              className={`mt-2 flex flex-wrap gap-2 text-${skillset.color}-600`}
-            >
+            <ul className="mt-2 flex flex-wrap gap-2">
               {skillset.skills.map((skill) => (
                 <li
                   key={skill}
-                  className={`border border-${skillset.color}-600 px-2 py-1 text-base leading-none`}
+                  className={`border px-2 py-1 text-base leading-none ${skillset.cssClass}`}
                 >
                   {skill}
                 </li>
