@@ -27,7 +27,7 @@ interface ProjectProps {
 const PROJECTS: ProjectProps[] = [
   {
     title: '88rising Shop',
-    subtitle: 'custom Shopify 2.0 theme',
+    subtitle: 'Shopify on steroids',
     content: <Shop88risingContent />,
     url: 'https://shop.88rising.com',
     tags: {
@@ -54,7 +54,7 @@ const PROJECTS: ProjectProps[] = [
   },
   {
     title: '88rising x Honda',
-    subtitle: 'interactive 88rising x Honda digital lookbook',
+    subtitle: 'interactive, digital fashion lookbook',
     content: <HondaLookbookContent />,
     url: 'https://shop.88rising.com/pages/88typer',
     tags: {
