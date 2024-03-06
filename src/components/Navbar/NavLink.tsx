@@ -24,6 +24,7 @@ const NavLink = ({
       {...props}
     >
       {label}
+      <span className="sr-only">{`Scroll to ${label}`}</span>
     </Link>
   );
 };

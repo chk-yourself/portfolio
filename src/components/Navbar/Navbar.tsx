@@ -4,7 +4,7 @@ import { MouseEvent } from 'react';
 import { useMediaQuery } from '@/hooks';
 import NavLink from './NavLink';
 import Logo from './Logo';
-import { CloseIcon, MenuIcon, LinkedInIcon, GitHubIcon } from '@/icons';
+import Icon from '@/components/Icon';
 
 const NAV_LINKS = [
   {
@@ -104,7 +104,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
           title={showMenu ? 'Close menu' : 'Open menu'}
           aria-label={showMenu ? 'Close menu' : 'Open menu'}
         >
-          {showMenu ? <CloseIcon /> : <MenuIcon />}
+          {showMenu ? <Icon name="close" /> : <Icon name="menu" />}
           <span className="sr-only">
             {showMenu ? 'Close menu' : 'Open menu'}
           </span>
@@ -135,7 +135,12 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
             title="GitHub"
             aria-label="GitHub"
           >
-            <GitHubIcon size={14} className="md:h-[18px] md:w-[18px]" />
+            <Icon
+              name="gitHub"
+              size={14}
+              className="md:h-[18px] md:w-[18px]"
+              hoverFill
+            />
             <span className="sr-only">GitHub</span>
           </a>
         </li>
@@ -146,7 +151,12 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
             title="LinkedIn"
             aria-label="LinkedIn"
           >
-            <LinkedInIcon size={14} className="md:h-[18px] md:w-[18px]" />
+            <Icon
+              name="linkedIn"
+              size={14}
+              className="md:h-[18px] md:w-[18px]"
+              hoverFill
+            />
             <span className="sr-only">LinkedIn</span>
           </a>
         </li>

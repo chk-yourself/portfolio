@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeSection from '@/components/HomeSection';
-import { GitHubIcon, LinkedInIcon } from '@/icons';
+import Icon from '@/components/Icon';
 
 const Hero = () => {
   return (
@@ -22,7 +22,7 @@ const Hero = () => {
             title="GitHub"
             aria-label="View GitHub"
           >
-            <GitHubIcon />
+            <Icon name="gitHub" hoverFill />
             <span className="sr-only">GitHub</span>
           </a>
         </li>
@@ -33,7 +33,7 @@ const Hero = () => {
             title="LinkedIn"
             aria-label="View LinkedIn"
           >
-            <LinkedInIcon />
+            <Icon name="linkedIn" hoverFill />
             <span className="sr-only">LinkedIn</span>
           </a>
         </li>

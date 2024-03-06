@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
-import { CloseIcon } from '@/icons';
+import Icon from '@/components/Icon';
 
 export interface ModalProps {
   isActive: boolean;
@@ -34,7 +34,7 @@ const Modal = ({
         title="Close modal"
         aria-label="Close modal"
       >
-        <CloseIcon />
+        <Icon name="close" />
         <span className="sr-only">Close modal</span>
       </button>
       {content}
