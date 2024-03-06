@@ -12,12 +12,14 @@ const HomeSection = ({
   title = '',
   className = '',
   children,
+  id = '',
   ...props
 }: HomeSectionProps) => {
   return (
     <section
-      className={`mx-auto flex min-h-screen snap-start flex-col
-    justify-center scroll-smooth pt-10 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl ${className}`}
+      className={`mx-auto flex flex-col items-start justify-center
+    scroll-smooth py-10 md:max-w-2xl md:py-20 lg:max-w-3xl xl:max-w-4xl ${className}`}
+      id={id}
       {...props}
     >
       {title && (

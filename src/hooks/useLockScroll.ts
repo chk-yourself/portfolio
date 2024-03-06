@@ -36,7 +36,6 @@ const useLockScroll = () => {
   }, []);
 
   useLayoutEffect(() => {
-    console.log('use layout effect')
     if (!ref.current) {
       ref.current = document.body;
     }

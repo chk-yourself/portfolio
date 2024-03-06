@@ -1,9 +1,10 @@
 import React from 'react';
 import HomeSection from '@/components/HomeSection';
+import { GitHubIcon, LinkedInIcon } from '@/icons';
 
 const Hero = () => {
   return (
-    <HomeSection id="hero" className="flex flex-col justify-center">
+    <HomeSection id="hero" className="relative h-[calc(100vh_-_40px)] py-0">
       <h1 className="mb-6 text-6xl font-bold tracking-tightest sm:text-7xl md:text-8xl">
         Christina Kim
       </h1>
@@ -15,47 +16,44 @@ const Hero = () => {
       </p>
       <ul className="mt-6 flex gap-4">
         <li className="">
-          <a target="_blank" href="https://github.com/chk-yourself">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6 hover:fill-pink-300"
-            >
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
+          <a
+            target="_blank"
+            href="https://github.com/chk-yourself"
+            title="GitHub"
+            aria-label="View GitHub"
+          >
+            <GitHubIcon />
+            <span className="sr-only">GitHub</span>
           </a>
         </li>
         <li className="">
           <a
             target="_blank"
             href="https://www.linkedin.com/in/christina-kim-12904646"
+            title="LinkedIn"
+            aria-label="View LinkedIn"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6 hover:fill-pink-300"
-            >
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
+            <LinkedInIcon />
+            <span className="sr-only">LinkedIn</span>
           </a>
         </li>
       </ul>
+      <div className="absolute bottom-6 left-[5%]">
+        <div className="w-min -rotate-90 transform leading-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 17 10"
+            className="bounce block block align-middle"
+          >
+            <path
+              className="cls-1"
+              d="M6.22,8.75,3.37,5.89H17V4.12H3.37L6.22,1.25,5,0,0,5l5,5Z"
+            ></path>
+          </svg>
+        </div>
+      </div>
     </HomeSection>
   );
 };

@@ -6,8 +6,8 @@ const Shop88risingContent = () => {
       <p className="leading-tight">
         I spearheaded the ambitious redesign of 88rising&apos;s flagship
         e-commerce store, developing a bespoke Shopify 2.0 theme that
-        significantly increased sales conversions by 25%, web performance by
-        65%, accessibility by 30%, and SEO by 10%.
+        significantly enhanced web performance by 65%, accessibility by 30%, and
+        SEO by 10%, contributing to a 20% increase in sales conversion rates.
       </p>
       <p className="mt-4 leading-tight">
         Leveraging advanced JavaScript features, modern Web APIs, and creative

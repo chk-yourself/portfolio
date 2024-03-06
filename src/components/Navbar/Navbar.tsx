@@ -4,7 +4,7 @@ import { MouseEvent } from 'react';
 import { useMediaQuery } from '@/hooks';
 import NavLink from './NavLink';
 import Logo from './Logo';
-import { CloseIcon, MenuIcon } from '@/icons';
+import { CloseIcon, MenuIcon, LinkedInIcon, GitHubIcon } from '@/icons';
 
 const NAV_LINKS = [
   {
@@ -15,12 +15,6 @@ const NAV_LINKS = [
     label: 'Skills',
     hash: 'skills',
   },
-  /*
-  {
-    label: 'Experience',
-    hash: 'experience',
-  },
-  */
   {
     label: 'Projects',
     hash: 'projects',
@@ -65,7 +59,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
 
   useEffect(() => {
     const element = document.getElementById(activeSectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ block: 'start', behavior: 'smooth' });
   }, [activeSectionId]);
 
   useEffect(() => {
@@ -99,7 +93,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
   };
 
   return (
-    <nav className="fixed flex h-10 w-full items-center justify-between bg-slate-50">
+    <nav className="fixed z-10 flex h-10 w-full items-center justify-between bg-slate-50">
       <div>
         <Logo />
       </div>
@@ -107,8 +101,13 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
         <button
           onClick={handleToggleMenu}
           className="flex items-center px-3 py-2 hover:text-pink-300"
+          title={showMenu ? 'Close menu' : 'Open menu'}
+          aria-label={showMenu ? 'Close menu' : 'Open menu'}
         >
           {showMenu ? <CloseIcon /> : <MenuIcon />}
+          <span className="sr-only">
+            {showMenu ? 'Close menu' : 'Open menu'}
+          </span>
         </button>
       </div>
       {(expandMenu || showMenu) && (
@@ -133,44 +132,22 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
             target="_blank"
             href="https://github.com/chk-yourself"
             className=""
+            title="GitHub"
+            aria-label="GitHub"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-[14px] w-[14px] hover:fill-pink-300 md:h-[18px] md:w-[18px]"
-            >
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
+            <GitHubIcon size={14} className="md:h-[18px] md:w-[18px]" />
+            <span className="sr-only">GitHub</span>
           </a>
         </li>
         <li className="mt-5 md:mt-9">
           <a
             target="_blank"
             href="https://www.linkedin.com/in/christina-kim-12904646"
+            title="LinkedIn"
+            aria-label="LinkedIn"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-[14px] w-[14px] hover:fill-pink-300 md:h-[18px] md:w-[18px]"
-            >
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
+            <LinkedInIcon size={14} className="md:h-[18px] md:w-[18px]" />
+            <span className="sr-only">LinkedIn</span>
           </a>
         </li>
       </ul>

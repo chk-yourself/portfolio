@@ -101,7 +101,11 @@ const Projects = ({ className = '' }: ProjectsProps) => {
   };
 
   return (
-    <HomeSection title="Projects" id="projects" className={`${className}`}>
+    <HomeSection
+      title="Projects"
+      id="projects"
+      className={`min-h-screen !justify-start ${className}`}
+    >
       <ul className="mx-auto flex flex-col gap-1 md:mr-0 md:max-w-md md:gap-2">
         {PROJECTS.map((project, i) => (
           <li key={project.title} className="text-3xl md:text-5xl">

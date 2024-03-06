@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
+import { CloseIcon } from '@/icons';
 
 export interface ModalProps {
   isActive: boolean;
@@ -26,23 +27,15 @@ const Modal = ({
   };
 
   return isOpen ? (
-    <div className="fixed left-0 top-0 h-screen w-screen overflow-y-auto bg-slate-50 p-[3.25rem] text-slate-900">
-      <button className="fixed right-4 top-4 block" onClick={handleClose}>
-        <svg
-          className="h-5 w-5 text-slate-900"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          strokeWidth="2"
-          stroke="currentColor"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" />{' '}
-          <line x1="18" y1="6" x2="6" y2="18" />{' '}
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
+    <div className="fixed left-0 top-0 z-50 h-screen w-screen overflow-y-auto bg-slate-50 p-[3.25rem] text-slate-900">
+      <button
+        className="fixed right-4 top-4 block text-slate-900 hover:text-pink-300"
+        onClick={handleClose}
+        title="Close modal"
+        aria-label="Close modal"
+      >
+        <CloseIcon />
+        <span className="sr-only">Close modal</span>
       </button>
       {content}
     </div>

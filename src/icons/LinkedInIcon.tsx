@@ -1,6 +1,6 @@
 import { IconProps } from './types';
 
-const MenuIcon = ({ size = 24, className = '' }) => {
+const LinkedInIcon = ({ size = 24, className = '' }: IconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,15 +12,15 @@ const MenuIcon = ({ size = 24, className = '' }) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={className}
+      className={`hover:fill-pink-300 ${className}`}
       aria-hidden={true}
       focusable={false}
     >
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+      <rect x="2" y="9" width="4" height="12"></rect>
+      <circle cx="4" cy="4" r="2"></circle>
     </svg>
   );
 };
 
-export default MenuIcon;
+export default LinkedInIcon;
