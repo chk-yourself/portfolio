@@ -21,6 +21,7 @@ const Hero = () => {
             href="https://github.com/chk-yourself"
             title="GitHub"
             aria-label="View GitHub"
+            rel="noopener noreferrer"
           >
             <Icon name="gitHub" hoverFill />
             <span className="sr-only">GitHub</span>
@@ -32,6 +33,7 @@ const Hero = () => {
             href="https://www.linkedin.com/in/christina-kim-12904646"
             title="LinkedIn"
             aria-label="View LinkedIn"
+            rel="noopener noreferrer"
           >
             <Icon name="linkedIn" hoverFill />
             <span className="sr-only">LinkedIn</span>

@@ -19,9 +19,6 @@ const NAV_LINKS = [
     label: 'Projects',
     hash: 'projects',
   },
-  {
-    label: 'Resume',
-  },
 ];
 
 interface NavbarProps {
@@ -123,6 +120,14 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
                 />
               </li>
             ))}
+            <li>
+              <NavLink
+                url="/Christina-Kim_Frontend-Engineer-Resume.pdf"
+                label="Resume"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            </li>
           </ul>
         </div>
       )}
@@ -134,6 +139,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
             className=""
             title="GitHub"
             aria-label="GitHub"
+            rel="noopener noreferrer"
           >
             <Icon
               name="gitHub"
@@ -150,6 +156,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
             href="https://www.linkedin.com/in/christina-kim-12904646"
             title="LinkedIn"
             aria-label="LinkedIn"
+            rel="noopener noreferrer"
           >
             <Icon
               name="linkedIn"

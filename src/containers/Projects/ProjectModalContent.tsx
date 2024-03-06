@@ -44,6 +44,7 @@ const ProjectModalContent = ({
           href={url}
           target="_blank"
           className="mt-6 bg-slate-900 px-3 py-1 text-slate-50"
+          rel="noopener noreferrer"
         >
           Check it out
         </a>
@@ -57,6 +58,7 @@ const ProjectModalContent = ({
           href={ghUrl}
           target="_blank"
           className="mt-6 border border-slate-900 px-3 py-1"
+          rel="noopener noreferrer"
         >
           GitHub
         </a>

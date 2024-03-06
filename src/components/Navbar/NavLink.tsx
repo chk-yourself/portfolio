@@ -7,6 +7,8 @@ interface NavLinkProps {
   label: string;
   className?: string;
   onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
+  target?: string;
+  rel?: string;
 }
 
 const NavLink = ({
@@ -24,7 +26,7 @@ const NavLink = ({
       {...props}
     >
       {label}
-      <span className="sr-only">{`Scroll to ${label}`}</span>
+      <span className="sr-only">{`View ${label}`}</span>
     </Link>
   );
 };
