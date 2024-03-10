@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import HomeSection from '@/components/HomeSection';
 import Icon from '@/components/Icon';
 
@@ -15,6 +16,18 @@ const Hero = () => {
         based in Los Angeles, CA
       </p>
       <ul className="mt-6 flex gap-4">
+        <li className="">
+          <Link
+            target="_blank"
+            href="/Christina-Kim_Frontend-Engineer-Resume.pdf"
+            title="Resume"
+            aria-label="View Resume"
+            rel="noopener noreferrer"
+          >
+            <Icon name="resume" hoverFill />
+            <span className="sr-only">Resume</span>
+          </Link>
+        </li>
         <li className="">
           <a
             target="_blank"

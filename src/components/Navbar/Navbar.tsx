@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { MouseEvent } from 'react';
 import { useMediaQuery } from '@/hooks';
@@ -98,23 +99,84 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
   };
 
   return (
-    <nav className="fixed z-10 flex h-10 w-full items-center justify-between bg-slate-50">
+    <nav
+      className={`fixed z-10 flex h-10 w-full items-center justify-between ${expandMenu || showMenu ? 'overflow-y-visible' : 'overflow-y-hidden'} bg-slate-50`}
+    >
       <div>
         <Logo />
       </div>
-      <div className="block md:hidden">
-        <button
-          onClick={handleToggleMenu}
-          className="flex items-center px-3 py-2 hover:text-pink-300"
-          title={showMenu ? 'Close menu' : 'Open menu'}
-          aria-label={showMenu ? 'Close menu' : 'Open menu'}
+      <div className="flex py-2 md:block md:py-0">
+        <ul
+          className={`${expandMenu || (!expandMenu && activeSectionId !== 'hero') ? '-translate-y-0' : 'translate-y-full'} flex transform items-center px-3 transition-transform duration-100 ease-in-out md:absolute md:right-0 md:top-20 md:block md:items-start md:px-4`}
         >
-          {showMenu ? <Icon name="close" /> : <Icon name="menu" />}
-          <span className="sr-only">
-            {showMenu ? 'Close menu' : 'Open menu'}
-          </span>
-        </button>
+          <li className="">
+            <Link
+              target="_blank"
+              href="/Christina-Kim_Frontend-Engineer-Resume.pdf"
+              title="Resume"
+              aria-label="View Resume"
+              rel="noopener noreferrer"
+            >
+              <Icon
+                size={18}
+                className="md:h-[18px] md:w-[18px]"
+                name="resume"
+                hoverFill
+              />
+              <span className="sr-only">Resume</span>
+            </Link>
+          </li>
+          <li className="ml-5 md:ml-0 md:mt-9">
+            <a
+              target="_blank"
+              href="https://github.com/chk-yourself"
+              className=""
+              title="GitHub"
+              aria-label="GitHub"
+              rel="noopener noreferrer"
+            >
+              <Icon
+                name="gitHub"
+                size={18}
+                className="md:h-[18px] md:w-[18px]"
+                hoverFill
+              />
+              <span className="sr-only">GitHub</span>
+            </a>
+          </li>
+          <li className="ml-5 md:ml-0 md:mt-9">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/christina-kim-12904646"
+              title="LinkedIn"
+              aria-label="LinkedIn"
+              rel="noopener noreferrer"
+            >
+              <Icon
+                name="linkedIn"
+                size={18}
+                className="md:h-[18px] md:w-[18px]"
+                hoverFill
+              />
+              <span className="sr-only">LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+        <div className="block md:hidden">
+          <button
+            onClick={handleToggleMenu}
+            className="flex items-center px-3 py-2 hover:text-pink-300"
+            title={showMenu ? 'Close menu' : 'Open menu'}
+            aria-label={showMenu ? 'Close menu' : 'Open menu'}
+          >
+            {showMenu ? <Icon name="close" /> : <Icon name="menu" />}
+            <span className="sr-only">
+              {showMenu ? 'Close menu' : 'Open menu'}
+            </span>
+          </button>
+        </div>
       </div>
+
       {(expandMenu || showMenu) && (
         <div className="absolute left-0 top-10 flex h-[calc(100vh_-_40px)] w-full items-start justify-center overflow-y-auto bg-slate-50 pt-5 md:static md:top-0 md:flex md:h-auto md:w-auto md:items-center md:pt-0">
           <ul className="flex flex-col md:flex-grow md:flex-row">
@@ -139,43 +201,6 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
           </ul>
         </div>
       )}
-      <ul className="absolute right-0 top-16 px-3 md:top-20 md:px-4">
-        <li className="">
-          <a
-            target="_blank"
-            href="https://github.com/chk-yourself"
-            className=""
-            title="GitHub"
-            aria-label="GitHub"
-            rel="noopener noreferrer"
-          >
-            <Icon
-              name="gitHub"
-              size={14}
-              className="md:h-[18px] md:w-[18px]"
-              hoverFill
-            />
-            <span className="sr-only">GitHub</span>
-          </a>
-        </li>
-        <li className="mt-5 md:mt-9">
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/christina-kim-12904646"
-            title="LinkedIn"
-            aria-label="LinkedIn"
-            rel="noopener noreferrer"
-          >
-            <Icon
-              name="linkedIn"
-              size={14}
-              className="md:h-[18px] md:w-[18px]"
-              hoverFill
-            />
-            <span className="sr-only">LinkedIn</span>
-          </a>
-        </li>
-      </ul>
     </nav>
   );
 };

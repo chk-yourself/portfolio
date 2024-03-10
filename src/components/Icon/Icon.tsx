@@ -3,8 +3,9 @@ import Close from './Close';
 import GitHub from './GitHub';
 import LinkedIn from './LinkedIn';
 import Menu from './Menu';
+import Resume from './Resume';
 
-type IconName = 'close' | 'gitHub' | 'linkedIn' | 'menu';
+type IconName = 'close' | 'gitHub' | 'linkedIn' | 'menu' | 'resume';
 
 interface IconProps {
   size?: number;
@@ -18,6 +19,7 @@ const ICONS = {
   gitHub: <GitHub />,
   linkedIn: <LinkedIn />,
   menu: <Menu />,
+  resume: <Resume />,
 };
 
 const Icon = ({
