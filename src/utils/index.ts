@@ -1,6 +1,6 @@
-export const debounce = <T extends Function>(callback: T, delay = 300) => {
+export const debounce = <Params extends any[]>(callback: (...args: Params) => any = () => null, delay = 300) => {
   let timerId: NodeJS.Timeout | number | null = null;
-  return (...args: any) => {
+  return (...args: Params) => {
     if (timerId) {
       window.clearTimeout(timerId);
     }
