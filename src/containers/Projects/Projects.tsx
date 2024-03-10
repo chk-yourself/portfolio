@@ -53,7 +53,7 @@ const PROJECTS: ProjectProps[] = [
     },
   },
   {
-    title: '88rising x Honda',
+    title: 'Honda Lookbook',
     subtitle: 'interactive, digital fashion lookbook',
     content: <HondaLookbookContent />,
     url: 'https://shop.88rising.com/pages/88typer',
@@ -63,7 +63,7 @@ const PROJECTS: ProjectProps[] = [
     },
   },
   {
-    title: '88rising x OHT NYC',
+    title: '88 x OHT NYC',
     subtitle: 'landing page for 88rising x OHT NYC collaboration',
     content: <OhtNycContent />,
     url: 'https://shop.88rising.com/pages/88-x-oht-nyc-jewelry',
@@ -106,7 +106,7 @@ const Projects = ({ className = '' }: ProjectsProps) => {
       id="projects"
       className={`min-h-screen !justify-start ${className}`}
     >
-      <ul className="mx-auto flex flex-col gap-1 md:mr-0 md:max-w-md md:gap-2">
+      <ul className="mx-auto flex min-w-full flex-col gap-1 md:mr-0 md:min-w-[28rem] md:max-w-md md:gap-2">
         {PROJECTS.map((project, i) => (
           <li key={project.title} className="text-3xl md:text-5xl">
             <button

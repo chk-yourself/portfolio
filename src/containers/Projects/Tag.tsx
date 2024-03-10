@@ -7,9 +7,9 @@ interface TagProps {
 
 const Tag = ({ text, className = '' }: TagProps) => {
   return (
-    <div className={`border px-2 py-1 text-xs leading-none ${className}`}>
+    <li className={`border px-2 py-1 text-xs leading-none ${className}`}>
       {text}
-    </div>
+    </li>
   );
 };
 

@@ -4,8 +4,8 @@ import Icon from '@/components/Icon';
 
 const Hero = () => {
   return (
-    <HomeSection id="hero" className="relative h-[calc(100vh_-_40px)] py-0">
-      <h1 className="mb-6 text-6xl font-bold tracking-tightest sm:text-7xl md:text-8xl">
+    <HomeSection id="hero" className="relative min-h-[calc(100vh_-_40px)] py-0">
+      <h1 className="mb-6 pt-10 text-6xl font-bold tracking-tightest sm:text-7xl md:text-8xl">
         Christina Kim
       </h1>
       <p className="text-[1.4rem] leading-tight text-pink-500 sm:text-[1.7rem] md:text-[2rem]">
@@ -40,8 +40,9 @@ const Hero = () => {
           </a>
         </li>
       </ul>
-      <div className="absolute bottom-6 left-[5%]">
-        <div className="w-min -rotate-90 transform leading-none">
+      <div className="pt-10">
+        {/*"absolute bottom-6 left-[5%]"*/}
+        <div className="absolute bottom-10 left-[5%] w-min -rotate-90 transform leading-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

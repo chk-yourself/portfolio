@@ -3,14 +3,14 @@ import React from 'react';
 const World1999Content = () => {
   return (
     <>
-      <p className="leading-tight">
+      <p className="text-sm">
         I spearheaded the development and design of 1999 World, in partnership
         with Microsoft, reimagining the classic Windows 98 experience in the
         modern web with optimized web performance, cross-platform compatibility,
         accessibility, and responsive design. Serving as project manager, lead
         developer, and lead UX/UI designer:
       </p>
-      <ul className="my-2 list-disc px-8 leading-tight">
+      <ul className="my-2 list-disc px-8 text-sm">
         <li>Managed the project scope, timeline, and resource allocation</li>
         <li>
           Orchestrated seamless cross-organizational and cross-functional

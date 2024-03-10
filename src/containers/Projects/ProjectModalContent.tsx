@@ -21,17 +21,19 @@ const ProjectModalContent = ({
 }: ProjectModalContentProps) => {
   return (
     <div className="m-auto flex flex-col items-center justify-center md:max-w-xl lg:max-w-[50%]">
-      <h3 className="text-5xl font-bold tracking-tightest">{title}</h3>
-      <p className="mb-4 mt-2 text-xs">{subtitle}</p>
+      <h3 className="text-center text-5xl font-bold tracking-tightest">
+        {title}
+      </h3>
+      <p className="mb-4 mt-2 text-center text-xs">{subtitle}</p>
       {tags?.tech && (
-        <ul className="flex flex-wrap gap-2 text-pink-500">
+        <ul className="mb-[0.375rem] flex flex-wrap justify-center gap-[0.375rem] text-pink-500">
           {tags.tech.map((tag) => (
             <Tag key={tag} text={tag} className="border-pink-500" />
           ))}
         </ul>
       )}
       {tags?.other && (
-        <ul className="mt-1 flex flex-wrap gap-2 text-sky-500">
+        <ul className="flex flex-wrap justify-center gap-[0.375rem] text-sky-500">
           {tags.other &&
             tags.other.map((tag) => (
               <Tag key={tag} text={tag} className="border-sky-500" />

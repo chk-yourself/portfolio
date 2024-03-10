@@ -5,6 +5,7 @@ import { useMediaQuery } from '@/hooks';
 import NavLink from './NavLink';
 import Logo from './Logo';
 import Icon from '@/components/Icon';
+import { debounce } from '@/utils';
 
 const NAV_LINKS = [
   {
@@ -31,6 +32,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
   const expandMenu = useMediaQuery('(min-width: 768px)');
 
   useEffect(() => {
+    const scrollEndEnabled = 'onscrollend' in window;
     const handleScrollEnd = () => {
       const scrollPosition = document.body.scrollTop;
       const sections = document.querySelectorAll('section');
@@ -48,9 +50,15 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
       });
     };
 
-    document.body.addEventListener('scrollend', handleScrollEnd);
+    const scrollEvent = scrollEndEnabled ? 'scrollend' : 'scroll';
+    const scrollListener = scrollEndEnabled
+      ? handleScrollEnd
+      : debounce(handleScrollEnd, 100);
+
+    document.body.addEventListener(scrollEvent, scrollListener);
+
     return () => {
-      document.body.removeEventListener('scrollend', handleScrollEnd);
+      document.body.removeEventListener(scrollEvent, scrollListener);
     };
   }, []);
 
@@ -108,7 +116,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
         </button>
       </div>
       {(expandMenu || showMenu) && (
-        <div className="absolute left-0 top-10 flex h-[calc(100vh_-_40px)] w-full items-start justify-center overflow-y-auto bg-slate-50 pt-10 md:static md:top-0 md:flex md:h-auto md:w-auto md:items-center md:pt-0">
+        <div className="absolute left-0 top-10 flex h-[calc(100vh_-_40px)] w-full items-start justify-center overflow-y-auto bg-slate-50 pt-5 md:static md:top-0 md:flex md:h-auto md:w-auto md:items-center md:pt-0">
           <ul className="flex flex-col md:flex-grow md:flex-row">
             {NAV_LINKS.map((link) => (
               <li key={link.label} className="py-4 md:py-0">
@@ -120,7 +128,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
                 />
               </li>
             ))}
-            <li>
+            <li className="py-4 md:py-0">
               <NavLink
                 url="/Christina-Kim_Frontend-Engineer-Resume.pdf"
                 label="Resume"
