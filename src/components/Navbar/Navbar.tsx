@@ -100,14 +100,14 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
 
   return (
     <nav
-      className={`fixed z-10 flex h-10 w-full items-center justify-between ${expandMenu || showMenu ? 'overflow-y-visible' : 'overflow-y-hidden'} bg-slate-50`}
+      className={`fixed z-50 flex h-10 w-full items-center justify-between ${expandMenu || showMenu ? 'overflow-y-visible' : 'overflow-y-hidden'} bg-slate-50`}
     >
       <div>
         <Logo />
       </div>
       <div className="flex py-2 md:block md:py-0">
         <ul
-          className={`${expandMenu || (!expandMenu && activeSectionId !== 'hero') ? '-translate-y-0' : 'translate-y-full'} flex transform items-center px-3 transition-transform duration-100 ease-in-out md:absolute md:right-0 md:top-20 md:block md:items-start md:px-4`}
+          className={`flex items-center px-3 md:absolute md:right-0 md:top-20 md:block md:items-start md:px-4`}
         >
           <li className="">
             <Link
@@ -117,12 +117,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
               aria-label="View Resume"
               rel="noopener noreferrer"
             >
-              <Icon
-                size={18}
-                className="md:h-[18px] md:w-[18px]"
-                name="resume"
-                hoverFill
-              />
+              <Icon size={18} className="" name="resume" hoverFill />
               <span className="sr-only">Resume</span>
             </Link>
           </li>
@@ -135,12 +130,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
               aria-label="GitHub"
               rel="noopener noreferrer"
             >
-              <Icon
-                name="gitHub"
-                size={18}
-                className="md:h-[18px] md:w-[18px]"
-                hoverFill
-              />
+              <Icon name="gitHub" size={18} className="" hoverFill />
               <span className="sr-only">GitHub</span>
             </a>
           </li>
@@ -152,12 +142,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
               aria-label="LinkedIn"
               rel="noopener noreferrer"
             >
-              <Icon
-                name="linkedIn"
-                size={18}
-                className="md:h-[18px] md:w-[18px]"
-                hoverFill
-              />
+              <Icon name="linkedIn" size={18} className="" hoverFill />
               <span className="sr-only">LinkedIn</span>
             </a>
           </li>

@@ -27,9 +27,9 @@ const Modal = ({
   };
 
   return isOpen ? (
-    <div className="fixed left-0 top-0 z-50 h-screen w-screen overflow-y-auto bg-slate-50 p-[3.25rem] text-slate-900">
+    <div className="fixed left-0 top-10 z-40 h-screen w-screen overflow-y-auto bg-slate-50 p-[3.25rem] text-slate-900">
       <button
-        className="fixed right-4 top-4 block text-slate-900 hover:text-pink-300"
+        className="fixed right-4 top-14 block text-slate-900 hover:text-pink-300"
         onClick={handleClose}
         title="Close modal"
         aria-label="Close modal"
