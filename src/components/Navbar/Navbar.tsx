@@ -100,7 +100,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
 
   return (
     <nav
-      className={`fixed z-50 flex h-10 w-full items-center justify-between ${expandMenu || showMenu ? 'overflow-y-visible' : 'overflow-y-hidden'} bg-slate-50`}
+      className={`fixed ${expandMenu ? 'z-40' : 'z-50'} flex h-10 w-full items-center justify-between ${expandMenu || showMenu ? 'overflow-y-visible' : 'overflow-y-hidden'} bg-slate-50`}
     >
       <div>
         <Logo />

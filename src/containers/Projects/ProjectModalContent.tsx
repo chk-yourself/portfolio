@@ -21,22 +21,29 @@ const ProjectModalContent = ({
 }: ProjectModalContentProps) => {
   return (
     <div className="m-auto flex flex-col items-center justify-center md:max-w-xl lg:max-w-[50%]">
-      <h3 className="text-center text-5xl font-bold tracking-tightest">
+      <h3 className="text-center text-4xl font-bold tracking-tightest md:text-5xl">
         {title}
       </h3>
-      <p className="mb-4 mt-2 text-center text-xs">{subtitle}</p>
-      {tags?.tech && (
-        <ul className="mb-[0.375rem] flex flex-wrap justify-center gap-[0.375rem] text-pink-500">
-          {tags.tech.map((tag) => (
-            <Tag key={tag} text={tag} className="border-pink-500" />
-          ))}
-        </ul>
-      )}
-      {tags?.other && (
-        <ul className="flex flex-wrap justify-center gap-[0.375rem] text-sky-500">
+      <p className="mb-4 mt-2 text-center text-[0.7rem] md:text-xs">
+        {subtitle}
+      </p>
+      {(tags?.tech || tags?.other) && (
+        <ul className="flex flex-wrap justify-center gap-[0.375rem] text-[0.7rem] leading-none md:text-xs">
+          {tags.tech &&
+            tags.tech.map((tag) => (
+              <Tag
+                key={tag}
+                text={tag}
+                className="border-pink-500 text-pink-500"
+              />
+            ))}
           {tags.other &&
             tags.other.map((tag) => (
-              <Tag key={tag} text={tag} className="border-sky-500" />
+              <Tag
+                key={tag}
+                text={tag}
+                className="border-sky-500 text-sky-500"
+              />
             ))}
         </ul>
       )}

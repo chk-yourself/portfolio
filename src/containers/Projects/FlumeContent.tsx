@@ -8,7 +8,7 @@ const FlumeContent = () => {
         highly-customizable, touch-enabled sliders and carousels with ease.
       </p>
       <h4 className="mt-4 text-sm font-bold uppercase">Features:</h4>
-      <ul className="my-2 list-disc px-8 text-xs">
+      <ul className="my-2 list-disc px-6 text-xs md:px-8">
         <li>Touch/swipe support</li>
         <li>CSS3 Sliding Transitions</li>
         <li>Infinite loop</li>

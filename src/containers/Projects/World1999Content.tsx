@@ -10,7 +10,7 @@ const World1999Content = () => {
         accessibility, and responsive design. Serving as project manager, lead
         developer, and lead UX/UI designer:
       </p>
-      <ul className="my-2 list-disc px-8 text-sm">
+      <ul className="my-2 list-disc px-6 text-sm md:px-8">
         <li>Managed the project scope, timeline, and resource allocation</li>
         <li>
           Orchestrated seamless cross-organizational and cross-functional
@@ -24,7 +24,7 @@ const World1999Content = () => {
           WCAG standards, and extended capabilities, including core file system
           capabilities, Windows Media Player, Notepad, Recycle Bin, and
           Minesweeper
-          <ul className="my-2 list-disc px-8 text-xs">
+          <ul className="my-2 list-disc px-6 text-xs md:px-8">
             <li>
               <span className="font-display text-[0.6rem] font-bold uppercase">
                 File System

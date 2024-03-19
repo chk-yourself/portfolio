@@ -23,7 +23,7 @@ const Shop88risingContent = () => {
         and creative problem-solving, I navigated around challenging Shopify
         constraints to implement advanced features, including:
       </p>
-      <ul className="my-4 list-disc px-8 text-xs">
+      <ul className="my-4 list-disc px-6 text-xs md:px-8">
         <li>geolocation-based content customization</li>
         <li>
           granular content access control based on configurable authentication
