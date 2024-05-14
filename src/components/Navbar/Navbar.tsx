@@ -163,7 +163,7 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
       </div>
 
       {(expandMenu || showMenu) && (
-        <div className="absolute left-0 top-10 flex h-[calc(100vh_-_40px)] w-full items-start justify-center overflow-y-auto bg-slate-50 pt-5 md:static md:top-0 md:flex md:h-auto md:w-auto md:items-center md:pt-0">
+        <div className="absolute left-0 top-10 flex h-[calc(100vh_-_40px)] w-full items-start justify-center overflow-y-auto pt-5 md:static md:top-0 md:flex md:h-auto md:w-auto md:items-center md:pt-0">
           <ul className="flex flex-col md:flex-grow md:flex-row">
             {NAV_LINKS.map((link) => (
               <li key={link.label} className="py-4 md:py-0">

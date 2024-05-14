@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <Navbar disableScroll={handleDisableScroll} />
-      <main className="h-full p-6 sm:p-10">
+      <main className="h-[calc(100%_-_40px)] p-6 sm:p-10">
         <Hero />
         <About />
         <Skills />

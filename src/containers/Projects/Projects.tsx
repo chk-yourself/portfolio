@@ -26,19 +26,10 @@ interface ProjectProps {
 
 const PROJECTS: ProjectProps[] = [
   {
-    title: '88rising Shop',
-    subtitle: 'Shopify on steroids',
-    content: <Shop88risingContent />,
-    url: 'https://shop.88rising.com',
-    tags: {
-      tech: ['JavaScript', 'Web Components', 'HTML', 'CSS', 'Sass', 'Liquid'],
-      other: ['UX/UI', 'Responsive Design', 'E-commerce', 'Shopify', 'Klaviyo'],
-    },
-  },
-  {
     title: '1999 World',
     subtitle: 'Windows 98 reimagined in the modern web',
     content: <World1999Content />,
+    url: 'https://www.1999world.com/',
     tags: {
       tech: [
         'Next',
@@ -50,6 +41,16 @@ const PROJECTS: ProjectProps[] = [
         'Strapi',
       ],
       other: ['UX/UI', 'Responsive Design', 'Project Management', 'Agile'],
+    },
+  },
+  {
+    title: '88rising Shop',
+    subtitle: 'Shopify on steroids',
+    content: <Shop88risingContent />,
+    url: 'https://shop.88rising.com',
+    tags: {
+      tech: ['JavaScript', 'Web Components', 'HTML', 'CSS', 'Sass', 'Liquid'],
+      other: ['UX/UI', 'Responsive Design', 'E-commerce', 'Shopify', 'Klaviyo'],
     },
   },
   {

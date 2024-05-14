@@ -14,7 +14,7 @@ const inconsolata = Inconsolata({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-body',
-  weight: ['300', '400'],
+  weight: ['300', '400', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
