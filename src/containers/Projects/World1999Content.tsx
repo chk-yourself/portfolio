@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
 const World1999Content = () => {
@@ -17,9 +18,9 @@ const World1999Content = () => {
         Windows 98 experience for the modern web.
       </p>
       <p className="mt-4 text-sm">
-        In addition to managing the full project lifecycle from concept through
-        launch, I spearheaded both the technical development and UX/UI design,
-        culminating in an innovative digital platform, recognized by{' '}
+        In addition to directing the project lifecycle from concept through
+        launch, I spearheaded both the technical development and UX/UI design of
+        the innovative digital platform, earning accolades from{' '}
         <a
           href="https://hypebeast.com/2024/5/mercer-labs-art-experiences-88rising-fam-1999-world"
           target="_blank"
@@ -28,31 +29,31 @@ const World1999Content = () => {
         >
           Hypebeast
         </a>{' '}
-        for "combin[ing] the charm and nostalgia of the 90’s internet era with
-        cutting-edge technology, offering users a unique digital journey through
-        the past with a modern twist."
+        for seamlessly blending '90s nostalgia with cutting-edge technology to
+        offer "a unique digital journey through the past with a modern twist."
       </p>
+      <p className="mt-4 text-sm">Notable contributions include:</p>
       <ul className="mb-2 mt-4 list-disc px-6 text-sm md:px-8">
         <li>
-          Directed project scope, timelines, and resource allocations, managing
-          cross-organizational and cross-functional collaborations and
-          stakeholder expectations
+          Directing the project scope, timelines, and resource allocation across
+          cross-organizational and cross-functional teams to ensure alignment
+          with stakeholder expectations
         </li>
         <li className="mt-2">
-          Spearheaded the integration of Microsoft's AI-powered MSN application,
-          directing secure, cross-origin communications to implement interactive
-          features
+          Spearheading the integration of Microsoft's AI-powered MSN
+          application, directing secure, cross-origin communications to
+          implement interactive features
         </li>
         <li className="mt-2">
-          Conducted sprint reviews, retrospectives, and backlog refinement,
+          Conducting sprint reviews, retrospectives, and backlog refinement,
           achieving a 30% boost in web performance and 60% in WCAG compliance
         </li>
         <li className="mt-2">
-          Architected a headless CMS and custom APIs, using Strapi, PostgreSQL,
+          Architecting a headless CMS and custom APIs, using Strapi, PostgreSQL,
           and Azure, to streamline content management across teams
         </li>
         <li className="mt-2">
-          Recreated defining features of Windows 98 to modern web standards,
+          Recreating defining features of Windows 98 to modern web standards,
           including:
           <ul className="my-2 list-disc px-6 text-xs md:px-8">
             <li>
