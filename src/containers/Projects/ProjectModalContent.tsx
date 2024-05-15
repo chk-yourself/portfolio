@@ -47,31 +47,33 @@ const ProjectModalContent = ({
             ))}
         </ul>
       )}
-      <div className="mt-8">{content}</div>
-      {url ? (
-        <a
-          href={url}
-          target="_blank"
-          className="mt-6 bg-slate-900 px-3 py-1 text-slate-50"
-          rel="noopener noreferrer"
-        >
-          Check it out
-        </a>
-      ) : (
-        <div className="mt-6 border border-slate-900 px-3 py-1">
-          Demo available upon request
-        </div>
-      )}
-      {ghUrl && (
-        <a
-          href={ghUrl}
-          target="_blank"
-          className="mt-6 border border-slate-900 px-3 py-1"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      )}
+      <div className="mt-8 pb-8">{content}</div>
+      <div className="sticky -bottom-9 flex w-full items-center justify-center gap-4 bg-white/80 py-2 md:-bottom-[3.25rem]">
+        {url ? (
+          <a
+            href={url}
+            target="_blank"
+            className=" bg-slate-900 px-3 py-1 text-slate-50"
+            rel="noopener noreferrer"
+          >
+            Check it out
+          </a>
+        ) : (
+          <div className="mt-6 border border-slate-900 px-3 py-1">
+            Demo available upon request
+          </div>
+        )}
+        {ghUrl && (
+          <a
+            href={ghUrl}
+            target="_blank"
+            className=" border border-slate-900 px-3 py-1"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        )}
+      </div>
     </div>
   );
 };

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import Icon from '@/components/Icon';
-import { useClickOutside } from '@/hooks';
+import { useClickOutside, useLockScroll } from '@/hooks';
 
 export interface ModalProps {
   isActive: boolean;
@@ -17,10 +17,19 @@ const Modal = ({
   onClose = () => null,
 }: ModalProps) => {
   const [isOpen, setIsOpen] = useState(isActive);
+  const { lock, unlock } = useLockScroll();
 
   useEffect(() => {
     setIsOpen(isActive);
   }, [isActive]);
+
+  useEffect(() => {
+    if (isOpen) {
+      lock();
+    } else {
+      unlock();
+    }
+  }, [isOpen, lock, unlock]);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -32,10 +41,10 @@ const Modal = ({
   return isOpen ? (
     <div
       ref={ref}
-      className="m:p-[3.25rem] fixed left-0 top-10 z-40 h-[calc(100vh_-_40px)] w-screen overflow-y-auto border-t border-slate-900 bg-white p-9 text-slate-900"
+      className="fixed left-0 top-10 z-40 h-[calc(100vh_-_40px)] w-screen overflow-y-auto scroll-smooth border-t border-slate-900 bg-white p-9 text-slate-900 md:p-[3.25rem]"
     >
       <button
-        className="m:top-14 fixed right-2 top-12 block text-slate-900 hover:text-pink-300 md:right-4"
+        className="fixed right-2 top-12 block text-slate-900 hover:text-pink-300 md:right-4 md:top-14"
         onClick={handleClose}
         title="Close modal"
         aria-label="Close modal"
