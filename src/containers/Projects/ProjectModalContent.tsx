@@ -20,7 +20,7 @@ const ProjectModalContent = ({
   content = null,
 }: ProjectModalContentProps) => {
   return (
-    <div className="m-auto flex flex-col items-center justify-center pb-8 md:max-w-xl lg:max-w-[50%]">
+    <div className="m-auto flex flex-col items-center justify-center pb-10 md:max-w-xl lg:max-w-[50%]">
       <h3 className="text-center text-4xl font-bold tracking-tightest md:text-5xl">
         {title}
       </h3>
