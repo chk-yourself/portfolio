@@ -15,7 +15,7 @@ const About = () => {
           compatibility, accessibility, and scalability.
         </p>
         <p className="mt-4">
-          Starting from humble origins as a self-taught engineer, my career
+          Starting from humble origins as a self-taught engineer, career
           highlights include designing and developing custom web solutions for
           renowned global brands. In partnership with Microsoft, Porsche, Honda,
           Guess, Puma, and 88rising, I've orchestrated the successful launch of
