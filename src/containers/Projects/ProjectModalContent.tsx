@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 import Tag from './Tag';
 import type { TagsProps } from '@/containers/Projects';
+import Icon from '@/components/Icon';
 
 interface ProjectModalContentProps {
   title?: string;
@@ -27,6 +28,16 @@ const ProjectModalContent = ({
       <p className="mb-4 mt-2 text-center text-[0.7rem] md:text-xs">
         {subtitle}
       </p>
+      {/*url && (
+        <a
+          href={url}
+          target="_blank"
+          className=" right-0 top-0 px-3 py-1"
+          rel="noopener noreferrer"
+        >
+          <Icon name="externalLink" size={18} hoverFill />
+        </a>
+      )*/}
       {(tags?.tech || tags?.other) && (
         <ul className="flex flex-wrap justify-center gap-[0.375rem] text-[0.7rem] leading-none md:text-xs">
           {tags.tech &&
