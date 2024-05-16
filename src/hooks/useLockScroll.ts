@@ -10,13 +10,11 @@ const useLockScroll = () => {
   const originalStyle = useRef<OriginalStyleProps | null>(null);
 
   const lock = useCallback(() => {
-    console.log('lock')
     if (ref.current) {
       const { overflow, paddingRight } = window.getComputedStyle(ref.current);
 
       // Save original styles
       originalStyle.current = { overflow, paddingRight };
-      console.log({ overflow, paddingRight })
 
       ref.current.style.overflow = 'hidden';
 
