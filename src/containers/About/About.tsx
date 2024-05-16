@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import HomeSection from '@/components/HomeSection';
 
@@ -6,29 +7,22 @@ const About = () => {
     <HomeSection title="About" id="about">
       <div className="mx-auto my-0 md:mr-0 md:max-w-md">
         <p>
-          Self-taught, user-centric web engineer with 7+ years of experience in
-          crafting impactful, consumer-facing digital experiences.
-        </p>
-        {/*
-        <p className="mt-4">
-          Starting my journey in UX/UI design, I specialize in marrying
-          technical functionality with intuitive, user-centered
-          design. As a self-taught, lifelong learner and tenacious problem solver with
-          a trained eye for detail, stemming from a robust foundation in UX
-          design.
+          I bring over 7+ years of experience in engineering impactful,
+          consumer-facing digital experiences. Rooted in a strong foundation in
+          UX/UI design, I specialize in marrying technical functionality with
+          intuitive, user-centered design, prioritizing web performance,
+          responsive design, cross-platform compatibility, accessibility, and
+          scalability.
         </p>
         <p className="mt-4">
-          Adept in leveraging modern technologies and fostering team synergy to
-          drive continuous innovation and refinement of the user experience, in
-          tune with evolving user needs, business objectives, and web standards.
+          Throughout my career, I've had the privilege of designing and
+          developing custom web solutions for renowned global brands, including
+          Microsoft, Porsche, Honda, Guess, Puma, and 88rising. I've
+          orchestrated the successful launch of innovative microsites and
+          impactful landing pages for global marketing campaigns, honing my
+          ability to lead cross-functional teams to innovate and execute
+          technical solutions that advance diverse business objectives.
         </p>
-        <p className="mt-4">
-          Proven leadership in guiding cross-functional teams to innovate and
-          execute technical solutions that advance strategic business
-          objectives, committed to fostering a culture of continuous improvement
-          and innovation.
-        </p>
-        */}
       </div>
     </HomeSection>
   );
