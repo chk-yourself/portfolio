@@ -54,7 +54,7 @@ const Hero = () => {
         </li>
       </ul>
       <div className="pt-10">
-        <div className="absolute bottom-12 left-[5%] w-min -rotate-90 transform leading-none">
+        <div className="absolute bottom-16 left-[5%] w-min -rotate-90 transform leading-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
