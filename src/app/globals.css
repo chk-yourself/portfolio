@@ -224,5 +224,8 @@ h6 {
     position: -ms-sticky;
     position: -o-sticky;
     position: sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 }
