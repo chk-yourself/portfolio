@@ -16,9 +16,9 @@ const About = () => {
         </p>
         <p className="mt-4">
           Throughout my career, I've had the privilege of designing and
-          developing custom web solutions for renowned global brands, including
-          Microsoft, Porsche, Honda, Guess, Puma, and 88rising. I've
-          orchestrated the successful launch of innovative microsites and
+          developing custom web solutions for renowned global brands. In
+          partnership with Microsoft, Porsche, Honda, Guess, Puma, and 88rising,
+          I've orchestrated the successful launch of innovative microsites and
           impactful landing pages for global marketing campaigns, honing my
           ability to lead cross-functional teams to innovate and execute
           technical solutions that advance diverse business objectives.
