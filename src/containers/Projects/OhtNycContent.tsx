@@ -1,8 +1,20 @@
-import React from 'react';
+/* eslint-disable react/no-unescaped-entities */
+import Image from 'next/image';
 
 const OhtNycContent = () => {
   return (
     <>
+      <Image
+        style={{
+          userSelect: 'none',
+          objectFit: 'contain',
+        }}
+        src="/ohtnyc.png"
+        alt="88rising x OHT NYC collab"
+        width={1536}
+        height={1202}
+        className="mb-8 rounded border border-slate-900"
+      />
       <p className="text-sm">
         I designed and developed a landing page to promote the launch of
         88rising&apos;s first collection with OHT NYC, featuring an exclusive

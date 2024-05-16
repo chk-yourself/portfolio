@@ -1,9 +1,21 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import Image from 'next/image';
 
 const World1999Content = () => {
   return (
     <>
+      <Image
+        style={{
+          userSelect: 'none',
+          objectFit: 'contain',
+        }}
+        src="/world1999.png"
+        alt="preview of 1999world.com"
+        width={2400}
+        height={1260}
+        className="mb-8 rounded border border-slate-900"
+      />
       <p className="text-sm">
         As the project manager, lead developer, and lead UX/UI designer for{' '}
         <a

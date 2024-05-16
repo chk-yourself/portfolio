@@ -1,8 +1,20 @@
-import React from 'react';
+/* eslint-disable react/no-unescaped-entities */
+import Image from 'next/image';
 
 const HondaLookbookContent = () => {
   return (
     <>
+      <Image
+        style={{
+          userSelect: 'none',
+          objectFit: 'contain',
+        }}
+        src="/honda-lookbook.png"
+        alt="Honda x 88rising lookbook preview"
+        width={1536}
+        height={1202}
+        className="mb-8 rounded border border-slate-900"
+      />
       <p className="text-sm">
         I designed and developed a digital lookbook to promote 88rising&apos;s
         latest collection in collaboration with Honda.
