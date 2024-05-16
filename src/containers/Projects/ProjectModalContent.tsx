@@ -59,7 +59,7 @@ const ProjectModalContent = ({
         </ul>
       )}
       <div className="mt-8 pb-8">{content}</div>
-      <div className="position-sticky sticky -bottom-9 block flex w-full items-center justify-center gap-4 bg-white/80 py-2 md:-bottom-[3.25rem]">
+      <div className="position-sticky sticky -bottom-9 left-0 block flex w-full items-center justify-center gap-4 bg-white/80 py-2 md:-bottom-[3.25rem]">
         {url ? (
           <a
             href={url}
