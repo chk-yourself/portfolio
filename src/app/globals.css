@@ -217,4 +217,12 @@ h6 {
       )
       rotate(-90deg);
   }
+
+  .position-sticky {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+  }
 }
