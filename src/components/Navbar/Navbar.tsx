@@ -33,9 +33,10 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
   const expandMenu = useMediaQuery('(min-width: 768px)');
 
   useEffect(() => {
+    const mainEl = document.getElementById('main') ?? document.body;
     const scrollEndEnabled = 'onscrollend' in window;
     const handleScrollEnd = () => {
-      const scrollPosition = document.body.scrollTop;
+      const scrollPosition = mainEl.scrollTop;
       const sections = document.querySelectorAll('section');
 
       sections.forEach((section) => {
@@ -56,10 +57,10 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
       ? handleScrollEnd
       : debounce(handleScrollEnd, 100);
 
-    document.body.addEventListener(scrollEvent, scrollListener);
+    mainEl.addEventListener(scrollEvent, scrollListener);
 
     return () => {
-      document.body.removeEventListener(scrollEvent, scrollListener);
+      mainEl.removeEventListener(scrollEvent, scrollListener);
     };
   }, []);
 
@@ -70,13 +71,6 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
 
   useEffect(() => {
     setShowMenu(false);
-    /*
-    if (expandMenu) {
-      setShowMenu(true);
-    } else {
-      setShowMenu(false);
-    }
-    */
   }, [expandMenu]);
 
   useEffect(() => {

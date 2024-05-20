@@ -19,7 +19,7 @@ const About = () => {
           highlights include designing and developing custom web solutions for
           world-renowned brands. In partnership with Microsoft, Porsche, Honda,
           Guess, Puma, and 88rising, I've orchestrated the successful launches
-          of innovative microsites and impactful landing pages for global
+          of innovative microsites and high-performing landing pages for global
           marketing campaigns, honing my ability to lead cross-functional teams
           to innovate and execute technical solutions that advance diverse
           business objectives.

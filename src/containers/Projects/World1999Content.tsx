@@ -21,7 +21,7 @@ const World1999Content = () => {
         <a
           href="https://www.1999world.com/"
           target="_blank"
-          className="font-black underline"
+          className="highlight-hover font-bold underline"
           rel="noopener noreferrer"
         >
           1999 World
@@ -32,20 +32,44 @@ const World1999Content = () => {
       <p className="mt-4 text-sm">
         In addition to directing the project lifecycle from concept through
         launch, I spearheaded both the technical development and UX/UI design of
-        the innovative digital platform, earning accolades from{' '}
+        the innovative digital platform, acclaimed by{' '}
         <a
           href="https://hypebeast.com/2024/5/mercer-labs-art-experiences-88rising-fam-1999-world"
           target="_blank"
-          className="font-black underline"
+          className="highlight-hover font-bold underline"
           rel="noopener noreferrer"
         >
           Hypebeast
         </a>{' '}
-        for seamlessly blending '90s nostalgia with cutting-edge technology to
-        offer "a unique digital journey through the past with a modern twist."
+        for
       </p>
+      <blockquote
+        cite="https://hypebeast.com/2024/5/mercer-labs-art-experiences-88rising-fam-1999-world"
+        className="my-8"
+      >
+        <p className="mx-auto w-4/5 font-display text-xl font-bold md:w-3/5">
+          <span className="bg-pink-200">
+            "combin[ing] the charm and nostalgia of the 90’s internet era with
+            cutting-edge technology, offering users a unique digital journey
+            through the past with a modern twist."
+          </span>
+        </p>
+        <footer className="mx-auto mt-1 w-4/5 text-xs md:w-3/5">
+          <cite className="uppercase not-italic">
+            —{' '}
+            <a
+              href="https://hypebeast.com/2024/5/mercer-labs-art-experiences-88rising-fam-1999-world"
+              target="_blank"
+              className="highlight-hover font-bold underline"
+              rel="noopener noreferrer"
+            >
+              Hypebeast
+            </a>
+          </cite>
+        </footer>
+      </blockquote>
       <p className="mt-4 text-sm">Notable contributions include:</p>
-      <ul className="mb-2 mt-4 list-disc px-6 text-sm md:px-8">
+      <ul className="mb-2 mt-4 list-inside list-disc text-sm">
         <li>
           Directing the project scope, timelines, and resource allocation across
           cross-organizational and cross-functional teams to ensure alignment
@@ -67,7 +91,7 @@ const World1999Content = () => {
         <li className="mt-2">
           Recreating defining features of Windows 98 to modern web standards,
           including:
-          <ul className="my-2 list-disc px-6 text-xs md:px-8">
+          <ul className="my-2 list-disc px-8 text-xs md:px-12">
             <li>
               <span className="font-display text-[0.6rem] font-bold uppercase">
                 File System
