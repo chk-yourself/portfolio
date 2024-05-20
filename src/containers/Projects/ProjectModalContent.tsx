@@ -35,16 +35,6 @@ const ProjectModalContent = ({
       <p className="mb-4 mt-2 text-center text-[0.7rem] md:text-xs lg:text-[0.8rem]">
         {subtitle}
       </p>
-      {/*url && (
-        <a
-          href={url}
-          target="_blank"
-          className=" right-0 top-0 px-3 py-1"
-          rel="noopener noreferrer"
-        >
-          <Icon name="externalLink" size={18} hoverFill />
-        </a>
-      )*/}
       {(tags?.tech || tags?.other) && (
         <ul className="flex max-w-[600px] flex-wrap justify-center gap-[0.375rem] text-[0.7rem] leading-none md:text-xs">
           {tags.tech &&
@@ -71,13 +61,13 @@ const ProjectModalContent = ({
           <a
             href={url}
             target="_blank"
-            className=" bg-slate-900 px-3 py-1 text-slate-50"
+            className="w-[120px] bg-slate-900 px-3 py-1 text-slate-50"
             rel="noopener noreferrer"
           >
             Check it out
           </a>
         ) : (
-          <div className="mt-6 border border-slate-900 px-3 py-1">
+          <div className="mt-6 w-[120px] border border-slate-900 px-3 py-1">
             Demo available upon request
           </div>
         )}
@@ -85,7 +75,7 @@ const ProjectModalContent = ({
           <a
             href={ghUrl}
             target="_blank"
-            className=" border border-slate-900 px-3 py-1"
+            className="w-[120px] border border-slate-900 px-3 py-1"
             rel="noopener noreferrer"
           >
             GitHub
