@@ -5,7 +5,7 @@ import Icon from '@/components/Icon';
 
 const Hero = () => {
   return (
-    <HomeSection id="hero" className="relative min-h-full bg-pink-50 py-0">
+    <HomeSection id="hero" className="relative min-h-full py-0">
       <h1 className="mb-6 pt-10 text-6xl font-bold tracking-tightest sm:text-7xl md:text-8xl">
         Christina Kim
       </h1>
