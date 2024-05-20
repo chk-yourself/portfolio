@@ -15,11 +15,11 @@ const HondaLookbookContent = () => {
         height={1202}
         className="mb-8 rounded border border-slate-900"
       />
-      <p className="text-sm">
+      <p className="">
         I designed and developed a digital lookbook to promote 88rising&apos;s
         latest collection in collaboration with Honda.
       </p>
-      <p className="mt-4 text-sm">
+      <p className="mt-4">
         Reimagining the traditional, print fashion lookbook in the modern web, I
         created a mobile-friendly carousel component to showcase the collection
         through editorial-style photography with strategically placed,

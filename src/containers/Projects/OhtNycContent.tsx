@@ -15,19 +15,19 @@ const OhtNycContent = () => {
         height={1202}
         className="mb-8 rounded border border-slate-900"
       />
-      <p className="text-sm">
+      <p className="">
         I designed and developed a landing page to promote the launch of
         88rising&apos;s first collection with OHT NYC, featuring an exclusive
         interview with their CEO to drive the story behind the collection.
       </p>
-      <p className="mt-4 text-sm">
+      <p className="mt-4">
         Collaborating closely with cross-functional teams across both
         organizations to bring their shared creative vision to life in alignment
         with their business objectives, I implemented engaging customer
         touchpoints to enhance brand identity, brand engagement, brand
         visibility, and ultimately drive sales conversions.
       </p>
-      <p className="mt-4 text-sm">
+      <p className="mt-4">
         To further enrich the narrative, I strategically embedded Instagram
         posts, leveraging social proof to bolster authenticity, credibility, and
         brand engagement. In addition, I designed, engineered, and integrated

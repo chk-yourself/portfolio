@@ -21,11 +21,11 @@ const ProjectModalContent = ({
   content = null,
 }: ProjectModalContentProps) => {
   return (
-    <div className="m-auto flex flex-col items-center justify-center pb-10 md:max-w-xl lg:max-w-[50%]">
+    <div className="m-auto flex max-w-xl flex-col items-center justify-center pb-10 xl:max-w-[50%]">
       <h3 className="text-center text-4xl font-bold tracking-tightest md:text-5xl">
         {title}
       </h3>
-      <p className="mb-4 mt-2 text-center text-[0.7rem] md:text-xs">
+      <p className="mb-4 mt-2 text-center text-[0.7rem] md:text-xs lg:text-[0.8rem]">
         {subtitle}
       </p>
       {/*url && (
@@ -58,8 +58,8 @@ const ProjectModalContent = ({
             ))}
         </ul>
       )}
-      <div className="mt-8 pb-8">{content}</div>
-      <div className="position-sticky sticky -bottom-9 left-0 top-0 block flex w-full items-center justify-center gap-4 bg-white/80 py-2 md:-bottom-[3.25rem]">
+      <div className="mt-8 pb-8 text-sm lg:text-base">{content}</div>
+      <div className="position-sticky sticky -bottom-9 left-0 top-0 flex w-full items-center justify-center gap-4 bg-white/80 py-2 md:-bottom-[3.25rem]">
         {url ? (
           <a
             href={url}
