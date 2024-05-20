@@ -23,15 +23,12 @@ export default function Home() {
   return (
     <>
       <Navbar disableScroll={handleDisableScroll} />
-      <main
-        id="main"
-        ref={ref}
-        className="h-[calc(100%_-_40px)] overflow-y-auto p-6 sm:p-10"
-      >
+      <main id="main" ref={ref} className="px-6 sm:p-10">
         <Hero />
         <About />
         <Skills />
-        <Projects className="pb-10" />
+        {/*<Projects className="pb-10" />*/}
+        <Projects />
       </main>
     </>
   );

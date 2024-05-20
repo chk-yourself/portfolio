@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { MouseEvent } from 'react';
 import { useMediaQuery } from '@/hooks';
 import NavLink from './NavLink';
@@ -30,22 +30,25 @@ interface NavbarProps {
 const Navbar = ({ disableScroll }: NavbarProps) => {
   const [activeSectionId, setActiveSectionId] = useState('hero');
   const [showMenu, setShowMenu] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const expandMenu = useMediaQuery('(min-width: 768px)');
 
   useEffect(() => {
     const mainEl = document.getElementById('main') ?? document.body;
     const scrollEndEnabled = 'onscrollend' in window;
+
     const handleScrollEnd = () => {
       const scrollPosition = mainEl.scrollTop;
-      const sections = document.querySelectorAll('section');
+      const sections: NodeListOf<HTMLElement> =
+        mainEl.querySelectorAll('.section');
 
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
 
         if (
-          scrollPosition >= sectionTop - 40 &&
-          scrollPosition < sectionTop + sectionHeight - 40
+          scrollPosition >= sectionTop - 24 &&
+          scrollPosition < sectionTop + sectionHeight - 24
         ) {
           setActiveSectionId(section.id);
         }
@@ -66,7 +69,12 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
 
   useEffect(() => {
     const element = document.getElementById(activeSectionId);
-    element?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+
+    element?.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+      inline: 'nearest',
+    });
   }, [activeSectionId]);
 
   useEffect(() => {
@@ -80,9 +88,18 @@ const Navbar = ({ disableScroll }: NavbarProps) => {
   const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const sectionId = e.currentTarget.dataset.sectionId;
-    if (sectionId) {
-      setActiveSectionId(sectionId);
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
     }
+
+    if (sectionId) {
+      // delay updating activeSectionId until all pending updates to the DOM and state are processed to ensure accurate DOM measurements
+      timeoutRef.current = setTimeout(() => {
+        setActiveSectionId(sectionId);
+      }, 0);
+    }
+
     if (showMenu) {
       setShowMenu(false);
     }
