@@ -106,16 +106,9 @@ body {
   width: 100vw;
   position: fixed;
   overflow: hidden;
-  /*scroll-padding-top: 40px;*/
-  /*
-    scroll-behavior: smooth;
-  scroll-padding-top: 40px;
-  scroll-margin: 0;
-  */
 }
 
 main {
-  /*scroll-padding-top: 40px;*/
   scroll-margin: 0;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -125,7 +118,6 @@ main {
   top: 40px;
   padding: 0;
   margin: 0;
-  max-height: -webkit-fill-available;
 }
 
 a {

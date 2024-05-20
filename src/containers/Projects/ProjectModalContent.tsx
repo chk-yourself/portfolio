@@ -23,7 +23,14 @@ const ProjectModalContent = ({
   return (
     <div className="m-auto flex max-w-xl flex-col items-center justify-center pb-10 xl:max-w-[50%]">
       <h3 className="text-center text-4xl font-bold tracking-tightest md:text-5xl">
-        {title}
+        <a
+          href={url}
+          target="_blank"
+          className="highlight-hover underline"
+          rel="noopener noreferrer"
+        >
+          {title}
+        </a>
       </h3>
       <p className="mb-4 mt-2 text-center text-[0.7rem] md:text-xs lg:text-[0.8rem]">
         {subtitle}

@@ -41,7 +41,7 @@ const Modal = ({
   return isOpen ? (
     <div
       ref={ref}
-      className="fixed left-0 top-10 z-40 h-[calc(100vh_-_40px)] w-screen overflow-y-auto scroll-smooth border-t border-slate-900 bg-white p-9 text-slate-900 md:p-[3.25rem]"
+      className="fixed left-0 top-10 z-40 h-[calc(100dvh_-_40px)] w-screen overflow-y-auto scroll-smooth border-t border-slate-900 bg-white p-9 text-slate-900 md:p-[3.25rem]"
     >
       <button
         className="fixed right-2 top-12 block text-slate-900 hover:text-pink-300 md:right-4 md:top-14"
