@@ -39,7 +39,7 @@ const ProjectModalContent = ({
         </a>
       )*/}
       {(tags?.tech || tags?.other) && (
-        <ul className="flex flex-wrap justify-center gap-[0.375rem] text-[0.7rem] leading-none md:text-xs">
+        <ul className="flex max-w-[600px] flex-wrap justify-center gap-[0.375rem] text-[0.7rem] leading-none md:text-xs">
           {tags.tech &&
             tags.tech.map((tag) => (
               <Tag

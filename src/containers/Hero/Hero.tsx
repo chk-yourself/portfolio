@@ -5,7 +5,7 @@ import Icon from '@/components/Icon';
 
 const Hero = () => {
   return (
-    <HomeSection id="hero" className="relative min-h-[calc(100vh_-_40px)] py-0">
+    <HomeSection id="hero" className="relative min-h-full py-0">
       <h1 className="mb-6 pt-10 text-6xl font-bold tracking-tightest sm:text-7xl md:text-8xl">
         Christina Kim
       </h1>
@@ -54,7 +54,7 @@ const Hero = () => {
         </li>
       </ul>
       <div className="pt-10">
-        <div className="absolute bottom-16 left-[5%] w-min -rotate-90 transform leading-none">
+        <div className="absolute bottom-8 left-[5%] w-min -rotate-90 transform leading-none md:bottom-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
