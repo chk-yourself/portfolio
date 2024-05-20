@@ -7,7 +7,7 @@ const About = () => {
     <HomeSection title="About" id="about">
       <div className="mx-auto my-0 md:mr-0 md:max-w-md">
         <p>
-          Unicorn web developer/designer with over 7 years of experience in
+          User-centric web developer with over 7 years of experience in
           engineering impactful, consumer-facing digital experiences. Rooted in
           a strong foundation in UX/UI design, I specialize in marrying
           technical functionality with intuitive, user-centered design,
@@ -17,12 +17,12 @@ const About = () => {
         <p className="mt-4">
           Starting from humble origins as a self-taught engineer, my career
           highlights include designing and developing custom web solutions for
-          renowned global brands. In partnership with Microsoft, Porsche, Honda,
-          Guess, Puma, and 88rising, I've orchestrated the successful launch of
-          innovative microsites and impactful landing pages for global marketing
-          campaigns, honing my ability to lead cross-functional teams to
-          innovate and execute technical solutions that advance diverse business
-          objectives.
+          world-renowned brands. In partnership with Microsoft, Porsche, Honda,
+          Guess, Puma, and 88rising, I've orchestrated the successful launches
+          of innovative microsites and impactful landing pages for global
+          marketing campaigns, honing my ability to lead cross-functional teams
+          to innovate and execute technical solutions that advance diverse
+          business objectives.
         </p>
       </div>
     </HomeSection>

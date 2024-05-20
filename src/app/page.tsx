@@ -10,7 +10,7 @@ import { useLockScroll } from '@/hooks';
 
 export default function Home() {
   /*const [isScrollDisabled, setIsScrollDisabled] = useState(false);*/
-  const { lock, unlock } = useLockScroll();
+  const { ref, lock, unlock } = useLockScroll();
 
   const handleDisableScroll = useCallback((isDisabled: boolean = false) => {
     if (isDisabled) {
@@ -24,7 +24,10 @@ export default function Home() {
   return (
     <>
       <Navbar disableScroll={handleDisableScroll} />
-      <main className="h-[calc(100%_-_40px)] p-6 sm:p-10">
+      <main
+        ref={ref}
+        className="h-[calc(100%_-_40px)] overflow-y-auto p-6 sm:p-10"
+      >
         <Hero />
         <About />
         <Skills />

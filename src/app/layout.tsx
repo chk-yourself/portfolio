@@ -20,7 +20,7 @@ const inconsolata = Inconsolata({
 export const metadata: Metadata = {
   title: 'Christina Kim - Frontend Engineer',
   description:
-    'Christina Kim is a user-centric frontend engineer with 7+ years of experience in crafting impactful, accessible, and performant consumer-facing digital experiences.',
+    'Christina Kim is a user-centric web engineer with over 7 years of experience in crafting impactful, accessible, and performant consumer-facing digital experiences.',
 };
 
 const karla = Karla({
